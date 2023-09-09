@@ -1,11 +1,13 @@
 package ModelElements;
 
+import org.w3c.dom.Text;
+
 public class PoligonalModel {
     Poligon poligon;
-    Texture texture;
+    Text texture;
 
 
-    public PoligonalModel(Poligon poligon, Texture texture) {
+    public PoligonalModel(Poligon poligon, Text texture) {
         this.poligon = poligon;
         this.texture = texture;
     }
