@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\PRG\ArhitecturePO\Homework10\messeger\GUI\registraition.ui'
+# Form implementation generated from reading ui file '.\registraition.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -11,20 +11,16 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
+def close():
+    print('dfgdf')
+
+
 class Ui_Regis(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 180)
         Dialog.setMinimumSize(QtCore.QSize(400, 100))
         Dialog.setMaximumSize(QtCore.QSize(400, 180))
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(300, 90, 101, 71))
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        self.buttonBox.setFont(font)
-        self.buttonBox.setOrientation(QtCore.Qt.Vertical)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(60, 50, 47, 13))
         font = QtGui.QFont()
@@ -64,7 +60,7 @@ class Ui_Regis(object):
         self.linepasswordEdit_1 = QtWidgets.QLineEdit(Dialog)
         self.linepasswordEdit_1.setGeometry(QtCore.QRect(140, 120, 151, 20))
         font = QtGui.QFont()
-        font.setPointSize(13)
+        font.setPointSize(10)
         self.linepasswordEdit_1.setFont(font)
         self.linepasswordEdit_1.setObjectName("linepasswordEdit_1")
         self.label_5 = QtWidgets.QLabel(Dialog)
@@ -73,18 +69,23 @@ class Ui_Regis(object):
         font.setPointSize(13)
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
+        self.okButton = QtWidgets.QPushButton(Dialog)
+        self.okButton.setGeometry(QtCore.QRect(310, 80, 75, 23))
+        self.okButton.setObjectName("okButton")
+        self.closeButton = QtWidgets.QPushButton(Dialog)
+        self.closeButton.setGeometry(QtCore.QRect(310, 120, 75, 23))
+        self.closeButton.setObjectName("closeButton")
 
         self.retranslateUi(Dialog)
-        # self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
-        # self.buttonBox.rejected.connect(Dialog.reject) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, Ui_Regis):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Ui_Regis.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label.setText(_translate("Dialog", "Логин"))
         self.label_2.setText(_translate("Dialog", "Пароль"))
         self.label_3.setText(_translate("Dialog", "Регистрация"))
         self.label_4.setText(_translate("Dialog", "Пароль"))
         self.label_5.setText(_translate("Dialog", "Подтвердите"))
-
+        self.okButton.setText(_translate("Dialog", "ОК"))
+        self.closeButton.setText(_translate("Dialog", "Выход"))

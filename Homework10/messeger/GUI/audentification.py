@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'd:\PRG\ArhitecturePO\Homework10\messeger\GUI\audentification.ui'
+# Form implementation generated from reading ui file '.\audentification.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -17,14 +17,6 @@ class Ui_Dialog(object):
         Dialog.resize(400, 100)
         Dialog.setMinimumSize(QtCore.QSize(400, 100))
         Dialog.setMaximumSize(QtCore.QSize(400, 100))
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
-        self.buttonBox.setGeometry(QtCore.QRect(290, 10, 101, 71))
-        font = QtGui.QFont()
-        font.setPointSize(13)
-        self.buttonBox.setFont(font)
-        self.buttonBox.setOrientation(QtCore.Qt.Vertical)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.buttonBox.setObjectName("buttonBox")
         self.label = QtWidgets.QLabel(Dialog)
         self.label.setGeometry(QtCore.QRect(30, 20, 47, 13))
         font = QtGui.QFont()
@@ -49,10 +41,14 @@ class Ui_Dialog(object):
         font.setPointSize(13)
         self.PasswordEdit.setFont(font)
         self.PasswordEdit.setObjectName("PasswordEdit")
+        self.closeButton = QtWidgets.QPushButton(Dialog)
+        self.closeButton.setGeometry(QtCore.QRect(310, 50, 75, 23))
+        self.closeButton.setObjectName("closeButton")
+        self.okButton = QtWidgets.QPushButton(Dialog)
+        self.okButton.setGeometry(QtCore.QRect(310, 10, 75, 23))
+        self.okButton.setObjectName("okButton")
 
         self.retranslateUi(Dialog)
-        # self.buttonBox.accepted.connect(Dialog.accept) # type: ignore
-        # self.buttonBox.rejected.connect(Dialog.reject) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
     def retranslateUi(self, Dialog):
@@ -60,13 +56,5 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
         self.label.setText(_translate("Dialog", "Логин"))
         self.label_2.setText(_translate("Dialog", "Пароль"))
-
-# if __name__ == "__main__":  
-#     import sys  
-#     app = QtWidgets.QApplication(sys.argv)  
-#     Dialog = QtWidgets.QDialog()  
-#     ui = Ui_Dialog()  
-#     ui.setupUi(Dialog)  
-#     Dialog.show()  
-#     sys.exit(app.exec_())  
-
+        self.closeButton.setText(_translate("Dialog", "Выход"))
+        self.okButton.setText(_translate("Dialog", "ОК"))
